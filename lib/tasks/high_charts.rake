@@ -11,6 +11,7 @@ namespace :highcharts do
   task :update do
     [
       'highcharts.js',
+      'highcharts-3d.js',
       'highcharts-more.js',
 
       'modules/accessibility.js',
@@ -19,6 +20,7 @@ namespace :highcharts do
       'modules/broken-axis.js',
       'modules/canvas-tools.js',
       'modules/data.js',
+      'modules/export-data.js',
       'modules/exporting.js',
       'modules/drilldown.js',
       'modules/funnel.js',
