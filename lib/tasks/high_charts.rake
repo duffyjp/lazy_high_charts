@@ -3,7 +3,6 @@ def download(file)
   print "#{file} - "
   system "curl -s http://code.highcharts.com/#{file} -L --compressed -o vendor/assets/javascripts/highcharts/#{file}"
   puts File.read("./vendor/assets/javascripts/highcharts/#{file}").scan(/Highcharts JS (.*)/)&.first&.first || "???"
-
 end
 
 namespace :highcharts do
