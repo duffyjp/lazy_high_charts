@@ -2,6 +2,7 @@
 def download(file)
   print "#{file} - "
   system "curl -s http://code.highcharts.com/#{file} -L --compressed -o vendor/assets/javascripts/highcharts/#{file}"
+  system "curl -s http://code.highcharts.com/#{file}.map -L --compressed -o vendor/assets/javascripts/highcharts/#{file}.map"
   puts File.read("./vendor/assets/javascripts/highcharts/#{file}").scan(/Highcharts JS (.*)/)&.first&.first || "???"
 end
 
